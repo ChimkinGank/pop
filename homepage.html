@@ -62,14 +62,14 @@ display: inline-block;
 }
 
 .scrollable-section { 
-   width: 53vw; 
+   width: 54vw; 
    max-height: 67vh;  
    overflow-y: auto;  
    border: 1px solid #ccc;  
    padding: 3vh;  
    background-color: #ffffff;  
-   margin-left: 25vw;
-   margin-right: 25vw;
+   margin-left: 23vw;
+   margin-right: 23vw;
    margin-top: 1%;
    margin-bottom: 1%;
 } 
@@ -127,8 +127,27 @@ The lengths being directed essentially whittle it down to two configurations (as
 <br>
 <br>
 Otherwise suppose $PA\cdot PB=PC\cdot PD\implies\frac{PA}{PC}=\frac{PD}{PB}$, and since $\angle APC=\angle DPB$, we have $\triangle PAC\sim\triangle PDB$, meaning $\angle PAC=\angle PDB$ so $ABCD$ is cyclic. <div style="float: right;"><div class="proof"> </div></div>
-
-
+<br><br>
+<div class="theorem"> 
+  <thm><b>Definition 2.2</b></thm><br>
+  Let $\omega$ be a circle centered at $O$ with radius $r$ and $P$ an arbitrary point. Then we define the <em>power</em> of $P$ with respect to $\omega$ as $\text{Pow}(P,\omega)=OP^2-r^2$. 
+</div><br>
+Sure, $\text{Pow}(P,\omega)=0$ if $P\in\omega$, but how is this useful? Consider the following.
+<br><br>
+<div class="theorem"> 
+  <thm><b>Theorem 2.3</b></thm><br>
+  Let $\omega$ be a circle and $P$ be an arbitrary point. If $A$ and $B$ are on $\omega$ such that $P$ is on line $AB$, then $\text{Pow}(P,\omega)=PA\cdot PB$, where lengths are directed. 
+</div><br>
+<em>Proof.</em> First, let us get rid of these annoying sign conditions. The power in both definitions is negative if $P$ is on the interior of $\omega$ and positive if $P$ is on the exterior of $\omega$ (why?) and are both $0$ if $P$ is on $\omega$ (as the "length" of a point is $0$). 
+<br>
+<br>
+Otherwise, let $PO$ meet $\omega$ at $X$ and $Y$. A diagram is shown below. 
+<img src="img3.png" class="center">
+The key idea is to write $OP^2-r^2$ as $(PO-r)(PO+r)$ (or $(r-PO)(r+PO)$ if $P$ is on the interior of $\omega$), from where these values are just $PX$ and $PY$, so $OP^2-r^2=PX\cdot PY=PA\cdot PB$ by <span style="color: #0b0bff:">Theorem 2.1</span>, as desired.
+<div style="float: right;"><div class="proof"> </div></div>
+<br><br>
+Note that this encapsulates part of <span style="color: #0b0bff:">Theorem 2.1</span> as now for any four points $A$, $B$, $C$, $D$ on one circle $\omega$ and arbitrary point $P$, $PA\cdot PB=\text{Pow}(P,\omega)=PC\cdot PD$.
+  
 </p> 
 </div> 
 
