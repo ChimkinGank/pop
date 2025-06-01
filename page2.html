@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<head>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$']]
+    }
+  };
+</script>
+<title>Power of a Point</title>
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+  
+.header {
+  background-color: #ccfff7;
+  padding: 1vh;
+  height: 12vh; 
+  text-align: center;
+  border-style: solid;
+  border-color:  #f06ba2 ;}
 
+.topnav {
+  overflow: hidden;
+  background-color: #f5fff6; 
+  height: 6vh;
+border-left-style: solid;
+border-right-style: solid;
+border-bottom-style: solid;
+  border-color:  #f06ba2 ;}
+
+
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 2vh;
+  text-decoration: none;}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;}
+
+.content {  background-color: #ffdae9;
+  padding: 1.5vh;
+  height: 73vh; }
+
+
+
+.buttons { 
+positioning: absolute;
+left: 3vw;
+display: inline-block;
+}
+
+.scrollable-section { 
+   width: 54vw; 
+   max-height: 67vh;  
+   overflow-y: auto;  
+   border: 1px solid #ccc;  
+   padding: 3vh;  
+   background-color: #ffffff;  
+   margin-left: 23vw;
+   margin-right: 23vw;
+   margin-top: 1%;
+   margin-bottom: 1%;
+} 
+
+.theorem {
+    border: 0.2vw solid #0b0bff;
+    padding: 0.6vw;
+    background-color: #f8fcfc;
+    width: fit-content;
+    border-radius: 1vw;
+}
+
+.proof {
+  width: 10px; 
+  height: 10px;  
+  border: 1px solid black;  
+  background-color: transparent;
+}
+  
+  thm { 
+    color: #00679e;
+  }
+  
+</style>
+</head>
+
+
+
+
+
+<body style = "background-color: #fce6ef;">
+<div class="header">
+  <h1> Power of a Point</h1>
+</div>
+<div class="topnav">
+  <a href="http://homer.stuy.edu/~ceisenbeiss70/homepage.html">Power of a Point</a>
+  <a href="http://homer.stuy.edu/~ceisenbeiss70/page2.html">Linearity</a>
+  <a href="http://homer.stuy.edu/~ceisenbeiss70/page3.html">Coaxiality Lemma</a>
+  <a href="http://homer.stuy.edu/~ceisenbeiss70/trivia.html">Trivia</a>
+</div>
+
+<div class="scrollable-section"> 
+  <h1> <span style="color: #bf0040;"> 1. </span> Directed Lengths </h1>  
+  <p> First, we are going to define directed lengths. If we say we are using directed lengths, then for any three collinear points $A$, $B$, $C$, the ratio $\frac{AB}{AC}$ is said to be $\frac{AB}{AC}$ if rays $\overrightarrow{AB}$ and $\overrightarrow{AC}$ point in the same direction, and $-\frac{AB}{AC}$ otherwise. The same applies for products as well. A few pictures are shown below. Using directed lengths, find the ratios $\frac{XA}{XB}$ and $\frac{YA}{YB}$ in the diagram below. 
+<img src="img1.png" class="center">
+This hints to why these are useful as indeed, while the magnitudes of these ratios are the same, one is $2$ and the other is $-2$. The more explicit upshot of these is that given two points $A$, $B$ and a point $P$ lying on line $AB$, the statement $\frac{PA}{PB}$ does not actually tell you where $P$ is if you are not using directed lengths. Sure, it whittles it down to two points, but you do not know which one is $P$. If you use directed lengths, one is positive and one is negative, hence the ratio $\frac{PA}{PB}$ tells you <em>exactly</em> where $P$ is.
+<h1> <span style="color: #bf0040;"> 2. </span> Power of a Point </h1>
+Okay, now we can actually get into power of a point. <br><br>
+<div class="theorem"> 
+  <thm><b>Theorem 2.1 (Power of a Point)</b></thm><br>
+  Let $A$, $B$, $C$, $D$ be points with $AB$ and $CD$ intersecting at $P$. Then $A$, $B$, $C$, $D$ are concyclic if and only if $PA\cdot PB=PC\cdot PD$, <b>where the lengths are directed</b>. 
+</div><br>
+The lengths being directed essentially whittle it down to two configurations (as these are the only ones that actually "work"), as shown below.
+<img src="img2.png" class="center">
+<em>Proof.</em> Suppose the points are concyclic. We omit the directed lengths condition as $PA\cdot PB$ and $PC\cdot PD$ are both negative if $P$ is inside $(ABCD)$ and positive if $P$ is outside $(ABCD)$. Then $\angle PAC=\angle PDB$ (why?) so $\triangle PAC\sim \triangle PDB$, meaning $\frac{PA}{PC}=\frac{PD}{PB}\implies PA\cdot PB=PC\cdot PD$, as desired.
+<br>
+<br>
+Otherwise suppose $PA\cdot PB=PC\cdot PD\implies\frac{PA}{PC}=\frac{PD}{PB}$, and since $\angle APC=\angle DPB$, we have $\triangle PAC\sim\triangle PDB$, meaning $\angle PAC=\angle PDB$ so $ABCD$ is cyclic. <div style="float: right;"><div class="proof"> </div></div>
+<br><br>
+<div class="theorem"> 
+  <thm><b>Definition 2.2</b></thm><br>
+  Let $\omega$ be a circle centered at $O$ with radius $r$ and $P$ an arbitrary point. Then we define the <em>power</em> of $P$ with respect to $\omega$ as $\text{Pow}(P,\omega)=OP^2-r^2$. 
+</div><br>
+Sure, $\text{Pow}(P,\omega)=0$ if $P\in\omega$, but how is this useful? Consider the following.
+<br><br>
+<div class="theorem"> 
+  <thm><b>Theorem 2.3</b></thm><br>
+  Let $\omega$ be a circle and $P$ be an arbitrary point. If $A$ and $B$ are on $\omega$ such that $P$ is on line $AB$, then $\text{Pow}(P,\omega)=PA\cdot PB$, where lengths are directed. 
+</div><br>
+<em>Proof.</em> First, let us get rid of these annoying sign conditions. The power in both definitions is negative if $P$ is on the interior of $\omega$ and positive if $P$ is on the exterior of $\omega$ (why?) and are both $0$ if $P$ is on $\omega$ (as the "length" of a point is $0$). 
+<br>
+<br>
+Otherwise, let $PO$ meet $\omega$ at $X$ and $Y$. A diagram is shown below. 
+<img src="img3.png" class="center">
+The key idea is to write $OP^2-r^2$ as $(PO-r)(PO+r)$ (or $(r-PO)(r+PO)$ if $P$ is on the interior of $\omega$), from where these values are just $PX$ and $PY$, so $OP^2-r^2=PX\cdot PY=PA\cdot PB$ by <span style="color: #0b0bff;">Theorem 2.1</span>, as desired.
+<div style="float: right;"><div class="proof"> </div></div>
+<br><br>
+Note that this encapsulates part of <span style="color: #0b0bff;">Theorem 2.1</span> as now for any four points $A$, $B$, $C$, $D$ on one circle $\omega$ and arbitrary point $P$, $PA\cdot PB=\text{Pow}(P,\omega)=PC\cdot PD$.
+  
+</p> 
+</div> 
+
+</body>
+</html>
