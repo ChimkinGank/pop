@@ -78,7 +78,7 @@ display: inline-block;
     border: 0.2vw solid #0b0bff;
     padding: 0.6vw;
     background-color: #f8fcfc;
-    width: 52vw;
+    width: 51vw;
     border-radius: 1vw;
 }
 
@@ -151,8 +151,38 @@ Here is the theorem that makes this relevant (and so powerful).
     which is obviously true. The second part comes from the fact that $f$ does not depend on $y$.
 <div style="float: right;"><div class="proof"> </div></div>
 <br><br>
-
-  
+We can now define the radical axis.
+<br><br>
+<div class="theorem"> 
+  <thm><b>Theorem 1.3 (Radical Axis)</b></thm><br>
+  Let $\omega_1$ and $\omega_2$ be two circles and $P$ be a point. Then the locus of points with $\text{Pow}(P,\omega_1)=\text{Pow}(P,\omega_2)$ is a line called the <em>radical axis</em> of $\omega_1$ and $\omega_2$. If the circles intersect, the radical axis is the line through the points common to the two circles.
+</div><br>
+<em>Proof.</em> Let $f(P)=\text{Pow}(P,\omega_1)-\text{Pow}(P,\omega_2)$. It clearly asks for the set of all points $P$ such that $f(P)=0$, which we know is a line perpendicular to the line connecting the centers of $\omega_1$ and $\omega_2$. Moreover, if a point $P$ is on both circles then $\text{Pow}(P,\omega_1)=\text{Pow}(P,\omega_2)=0$ and it must lie on the radical axis.
+<div style="float: right;"><div class="proof"> </div></div>
+<br><br>
+Similarly, the radical center can now be defined.
+<br><br>
+<div class="theorem"> 
+  <thm><b>Theorem 1.4 (Radical Center)</b></thm><br>
+  Let $\omega_1$, $\omega_2$, and $\omega_3$ be three circles whose centers are not collinear. Then there exists a point called the <em>radical center</em> of the three circles lying on the pairwise radical axes of the circles.
+</div>
+<img src="img4.png" class="center">
+<em>Proof.</em> 
+Since the centers are not collinear, no two of the radical axes are parallel (why?). This means we can intersect the radical axis of $\omega_1$ and $\omega_2$ with the radical axis of $\omega_2$ and $\omega_3$ at some point $X$, from where $\text{Pow}(X,\omega_1)=\text{Pow}(X,\omega_2)=\text{Pow}(X,\omega_3)$ hence $\text{Pow}(X,\omega_1)=\text{Pow}(X,\omega_3)$ and $X$ also lies on the radical axis of $\omega_1$ and $\omega_3$, as desired.
+<div style="float: right;"><div class="proof"> </div></div>
+<br><br>
+An adjacent theorem (that is also sometimes just referred to as radical center) is the following.
+<div class="theorem"> 
+  <thm><b>Theorem 1.5</b></thm><br>
+  Let $\omega_1$ and $\omega_2$ be circles, $A$, $B$ be points on $\omega_1$, and $C$, $D$ be points on $\omega_2$. Then if the intersection of $AB$ and $CD$ lies on the radical axis of $\omega_1$ and $\omega_2$, $ABCD$ is cyclic. 
+</div>
+<img src="img5.png" class="center">
+<em>Proof.</em> 
+Let this intersection be $P$. Then 
+    $$
+    PA\cdot PB=\text{Pow}(P,\omega_1)=\text{Pow}(P,\omega_2)=PC\cdot PD
+    $$
+so $ABCD$ is cyclic.
 </p> 
 </div> 
 
