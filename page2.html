@@ -113,41 +113,49 @@ display: inline-block;
 
 <div class="scrollable-section"> 
   <h1> <span style="color: #bf0040;"> 1. </span> Linearity </h1>  
-  <p> In a seemingly abrupt turn, we will now define the notion of linearity, specifically for functions that map $\mathbb{R}^2$ to $\mathbb{R}$.
-<img src="img1.png" class="center">
-This hints to why these are useful as indeed, while the magnitudes of these ratios are the same, one is $2$ and the other is $-2$. The more explicit upshot of these is that given two points $A$, $B$ and a point $P$ lying on line $AB$, the statement $\frac{PA}{PB}$ does not actually tell you where $P$ is if you are not using directed lengths. Sure, it whittles it down to two points, but you do not know which one is $P$. If you use directed lengths, one is positive and one is negative, hence the ratio $\frac{PA}{PB}$ tells you <em>exactly</em> where $P$ is.
-<h1> <span style="color: #bf0040;"> 2. </span> Power of a Point </h1>
-Okay, now we can actually get into power of a point. <br><br>
+  <p> In a seemingly abrupt turn, we will now define the notion of linearity, specifically for functions that map $\mathbb{R}^2$ to $\mathbb{R}$. <br><br>
 <div class="theorem"> 
-  <thm><b>Theorem 2.1 (Power of a Point)</b></thm><br>
-  Let $A$, $B$, $C$, $D$ be points with $AB$ and $CD$ intersecting at $P$. Then $A$, $B$, $C$, $D$ are concyclic if and only if $PA\cdot PB=PC\cdot PD$, <b>where the lengths are directed</b>. 
+  <thm><b>Definition 1.1 </b></thm><br>
+  A function $f:\mathbb{R}^2\rightarrow\mathbb{R}$ with elements of $\mathbb{R}^2$ interpreted as points is said to be linear if for any points $A$, $B$ and $P$ on line $AB$, that 
+  <br>
+  $f(P)=\frac{PB}{AB}\cdot f(A)+\frac{PA}{BA}\cdot f(B)$
+  <br>
+  <b>where the lengths are directed</b>. 
 </div><br>
-The lengths being directed essentially whittle it down to two configurations (as these are the only ones that actually "work"), as shown below.
-<img src="img2.png" class="center">
-<em>Proof.</em> Suppose the points are concyclic. We omit the directed lengths condition as $PA\cdot PB$ and $PC\cdot PD$ are both negative if $P$ is inside $(ABCD)$ and positive if $P$ is outside $(ABCD)$. Then $\angle PAC=\angle PDB$ (why?) so $\triangle PAC\sim \triangle PDB$, meaning $\frac{PA}{PC}=\frac{PD}{PB}\implies PA\cdot PB=PC\cdot PD$, as desired.
-<br>
-<br>
-Otherwise suppose $PA\cdot PB=PC\cdot PD\implies\frac{PA}{PC}=\frac{PD}{PB}$, and since $\angle APC=\angle DPB$, we have $\triangle PAC\sim\triangle PDB$, meaning $\angle PAC=\angle PDB$ so $ABCD$ is cyclic. <div style="float: right;"><div class="proof"> </div></div>
+Essentially, given the values of $f$ at $A$ and $B$, we scale $X$ by an appropriate ``similarity" to $A$ and $B$. Note that this definition should make some sense as 
+$$
+\overrightarrow{P}=\frac{PB}{AB}\cdot\overrightarrow{A}+\frac{PA}{BA}\cdot\overrightarrow{B}
+$$
+in terms of vectors. 
+  <br>
+  <br>
+Here is the theorem that makes this relevant (and so powerful).
 <br><br>
 <div class="theorem"> 
-  <thm><b>Definition 2.2</b></thm><br>
-  Let $\omega$ be a circle centered at $O$ with radius $r$ and $P$ an arbitrary point. Then we define the <em>power</em> of $P$ with respect to $\omega$ as $\text{Pow}(P,\omega)=OP^2-r^2$. 
+  <thm><b>Theorem 1.2 (Linearity of Power of a Point)</b></thm><br>
+  Let $\omega_1$ and $\omega_2$ be two circles. The function $f:\mathbb{R}^2\rightarrow\mathbb{R}$ defined by
+    <br>
+    $f(P)=\text{Pow}(P,\omega_1)-\text{Pow}(P,\omega_2)$
+    <br>
+    is linear. Moreover, $f$ is constant on lines perpendicular to the line connecting the centers of $\omega_1$ and $\omega_2$. 
 </div><br>
-Sure, $\text{Pow}(P,\omega)=0$ if $P\in\omega$, but how is this useful? Consider the following.
-<br><br>
-<div class="theorem"> 
-  <thm><b>Theorem 2.3</b></thm><br>
-  Let $\omega$ be a circle and $P$ be an arbitrary point. If $A$ and $B$ are on $\omega$ such that $P$ is on line $AB$, then $\text{Pow}(P,\omega)=PA\cdot PB$, where lengths are directed. 
-</div><br>
-<em>Proof.</em> First, let us get rid of these annoying sign conditions. The power in both definitions is negative if $P$ is on the interior of $\omega$ and positive if $P$ is on the exterior of $\omega$ (why?) and are both $0$ if $P$ is on $\omega$ (as the "length" of a point is $0$). 
-<br>
-<br>
-Otherwise, let $PO$ meet $\omega$ at $X$ and $Y$. A diagram is shown below. 
-<img src="img3.png" class="center">
-The key idea is to write $OP^2-r^2$ as $(PO-r)(PO+r)$ (or $(r-PO)(r+PO)$ if $P$ is on the interior of $\omega$), from where these values are just $PX$ and $PY$, so $OP^2-r^2=PX\cdot PY=PA\cdot PB$ by <span style="color: #0b0bff;">Theorem 2.1</span>, as desired.
+<em>Proof.</em> We use Cartesian coordinates and rotate the circles such that their centers lie on the $x$-axis. Let $\omega_1$ be centered at $(a,0)$ and $\omega_2$ be centered at $(b,0)$ and their radii be $r_1$ and $r_2$, respectively. Then if $P=(x,y)$ we have
+    \begin{align*}
+        f(P)&=(x-a)^2+y^2-{r_1}^2-(x-b)^2-y^2+{r_2}^2 \\
+        &=(2b-2a)x+(a^2-b^2+{r_2}^2-{r_1}^2).
+    \end{align*}
+    Then set $c=2b-2a$ and $d=a^2-b^2+{r_2}^2-{r_1}^2$ so $f(P)=cx+d$. We let $A=(a_1,a_2)$, $B=(b_1,b_2)$, and $P=(p_1,p_2)$. Let $A'$, $B'$, $P'$ be the projections of $A$, $B$, $P$ on the $x$-axis, respectively. Then $\frac{PB}{AB}=\frac{P'B'}{A'B'}=\frac{b_1-p_1}{b_1-a_1}$ and $\frac{PA}{BA}=\frac{P'A'}{B'A'}=\frac{a_1-p_1}{a_1-b_1}$, so what we want to show is
+    \begin{align*}
+        cp_1+d&=\frac{b_1-p_1}{b_1-a_1}\cdot(ca_1+d)+\frac{a_1-p_1}{a_1-b_1}\cdot(cb_1+d) \\
+        (cp_1+d)(b_1-a_1)&=(b_1-p_1)(ca_1+d)-(a_1-p_1)(cb_1+d) \\
+        (cp_1+d)(b_1-a_1)&=a_1b_1c+b_1d-a_1p_1c-p_1d-a_1b_1c-a_1d+b_1cp_1+p_1d \\
+        (cp_1+d)(b_1-a_1)&=b_1d-a_1p_1c-a_1d+b_1cp_1 \\
+        (cp_1+d)(b_1-a_1)&=cp_1(b_1-a_1)+d(b_1-a_1)
+    \end{align*}
+    which is obviously true. The second part comes from the fact that $f$ does not depend on $y$.
 <div style="float: right;"><div class="proof"> </div></div>
 <br><br>
-Note that this encapsulates part of <span style="color: #0b0bff;">Theorem 2.1</span> as now for any four points $A$, $B$, $C$, $D$ on one circle $\omega$ and arbitrary point $P$, $PA\cdot PB=\text{Pow}(P,\omega)=PC\cdot PD$.
+
   
 </p> 
 </div> 
