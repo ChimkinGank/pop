@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<head>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$']]
+    }
+  };
+</script>
+<title>Trivia</title>
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+  
+.header {
+  background-color: #ccfff7;
+  padding: 1vh;
+  height: 12vh; 
+  text-align: center;
+  font-size: 2.5vh;
+  border-style: solid;
+  border-color:  #f06ba2 ;}
+
+.topnav {
+  overflow: hidden;
+  background-color: #f5fff6; 
+  height: 6vh;
+border-left-style: solid;
+border-right-style: solid;
+border-bottom-style: solid;
+  border-color:  #f06ba2 ;}
+
+
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 2vh;
+  text-decoration: none;}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;}
+
+.content {  background-color: #ffdae9;
+  padding: 1.5vh;
+  height: 73vh; }
+
+
+
+.buttons { 
+positioning: absolute;
+left: 3vw;
+display: inline-block;
+}
+
+.scrollable-section { 
+   width: 54vw; 
+   max-height: 67vh;  
+   overflow-y: auto;  
+   border: 1px solid #ccc;  
+   padding: 3vh;  
+   background-color: #ffffff;  
+   margin-left: 23vw;
+   margin-right: 23vw;
+   margin-top: 1%;
+   margin-bottom: 1%;
+} 
+
+.theorem {
+    border: 0.2vw solid #0b0bff;
+    padding: 0.6vw;
+    background-color: #f8fcfc;
+    width: 51vw;
+    border-radius: 1vw;
+}
+
+.problem {
+    border: 0.2vw solid #b3754c;
+    padding: 0.6vw;
+    background-color: #fcf8f8;
+    width: 51vw;
+    border-radius: 1vw;
+}
+
+.proof {
+  width: 10px; 
+  height: 10px;  
+  border: 1px solid black;  
+  background-color: transparent;
+}
+  
+  thm { 
+    color: #00679e;
+  }
+
+  pblm {
+    color: #bc4c08;
+}
+ 
+table, th, td {
+  border:1px solid black;
+margin-left: auto;
+margin-right: auto;
+}
+ 
+</style>
+</head>
+
+
+
+
+
+<body style = "background-color: #fce6ef;">
+<div class="header">
+  <h1> Trivia</h1>
+</div>
+<div class="topnav">
+  <a href="http://homer.stuy.edu/~ceisenbeiss70/homepage.html">Power of a Point</a>
+  <a href="http://homer.stuy.edu/~ceisenbeiss70/page2.html">Linearity</a>
+  <a href="http://homer.stuy.edu/~ceisenbeiss70/page3.html">Coaxiality Lemma</a>
+  <a href="http://homer.stuy.edu/~ceisenbeiss70/trivia.html">Trivia</a>
+</div>
+
+<div class="scrollable-section"> 
+  <h1> <span style="color: #bf0040;"> 1. </span> Remarks </h1>  
+Here are some interesting facts for your amusement. 
+<br>
+<br>
+<table>
+<tr>
+<td>Meaning Based on Sign</td>
+<td>$\text{Pow}(P,\omega)$</td>
+<td>$\text{Pow}(P,\omega_1)-\text{Pow}(P,\omega_2)$</td>
+</tr>
+<tr>
+<td>Positive </td>
+<td>$P$ is outside $\omega$</td>
+<td>$P$ is on the side of the radical axis of $\omega_1$ and $\omega_2$ in the direction of $\overrightarrow{O_1O_2}$</td>
+</tr>
+<tr>
+<td>Negative</td>
+<td>$P$ is inside $\omega$</td>
+<td>$P$ is on the side of the radical axis of $\omega_1$ and $\omega_2$ in the direction of $\overrightarrow{O_2O_1}$</td>
+</tr>
+</table>
+<br>
+<br>
+<table>
+<tr>
+<th>Technique Name</th>
+<td>Power of a Point</td>
+<td>Linearity of Power of a Point</td>
+<td>Forgotten Coaxiality Lemma</td>
+</tr>
+<tr>
+<th>Colloquial Name</th>
+<td>pop</td>
+<td>linpop</td>
+<td>coaxiality lemma</td>
+</tr>
+<tr>
+<th>Often Used In</th>
+<td>AMC/AIME/USAMO</td>
+<td>Late AIME and USAMO</td>
+<td>USAMO</td>
+</tr>
+</table>
+<h1> <span style="color: #bf0040;"> 2. </span> Practice </h1> 
+The first three problems have integer solutions between 000 and 999, inclusive. If there are trailing zeroes, include them (i.e. write 007, not 7).
+<br><br>
+<div class="problem"> 
+  <pblm><b>Problem 2.1 (2005 AIME I/15)</b></pblm><br>
+  Triangle $ABC$ has $BC=20.$ The incircle of the triangle evenly trisects the median $AD.$ If the area of the triangle is $m \sqrt{n}$ where $m$ and $n$ are integers and $n$ is not divisible by the square of a prime, find $m+n.$ 
+</div><br>
+<div class="problem"> 
+  <pblm><b>Problem 2.2 (2021 AIME I/13)</b></pblm><br>
+  Circles $\omega_1$ and $\omega_2$ with radii $961$ and $625$, respectively, intersect at distinct points $A$ and $B$. A third circle $\omega$ is externally tangent to both $\omega_1$ and $\omega_2$. Suppose line $AB$ intersects $\omega$ at two points $P$ and $Q$ such that the measure of minor arc $\widehat{PQ}$ is $120^{\circ}$. Find the distance between the centers of $\omega_1$ and $\omega_2$. 
+</div><br>
+<div class="problem"> 
+  <pblm><b>Problem 2.3 (Corwin Eisenbeiss)</b></pblm><br>
+  Let $ABCD$ be a quadrilateral with $AB=AD=8$ and $CB=CD=7$ and let $P$ and $Q$ be points such that the points $P$, $Q$, $B$, and $D$ are concyclic. Given $PA^2=67$, $PC^2=69$, and $QA^2=73$, find $QC^2$.
+</div><br>
+<div class="problem"> 
+  <pblm><b>Problem 2.4 (IMO 1995/1)</b></pblm><br>
+  Let $A,B,C,D$ be four distinct points on a line, in that order. The circles with diameters $AC$ and $BD$ intersect at $X$ and $Y$. The line $XY$ meets $BC$ at $Z$. Let $P$ be a point on the line $XY$ other than $Z$. The line $CP$ intersects the circle with diameter $AC$ at $C$ and $M$, and the line $BP$ intersects the circle with diameter $BD$ at $B$ and $N$. Prove that the lines $AM,DN,XY$ are concurrent.   
+</div><br>
+<div class="problem"> 
+  <pblm><b>Problem 2.5 (ELMO SL 2013 G3)</b></pblm><br>
+  In $\triangle ABC$, a point $D$ lies on line $BC$. The circumcircle of $ABD$ meets $AC$ at $F$ (other than $A$), and the circumcircle of $ADC$ meets $AB$ at $E$ (other than $A$). Prove that as $D$ varies, the circumcircle of $AEF$ always passes through a fixed point other than $A$, and that this point lies on the median from $A$ to $BC$.
+</div><br>
+<div class="problem"> 
+  <pblm><b>Problem 2.6 (ELMO 2017/2)</b></pblm><br>
+  Let $\triangle ABC$ be a triangle with orthocenter $H$, and let $M$ be the midpoint of $\overline{BC}$. Suppose that $P$ and $Q$ are distinct points on the circle with diameter $\overline{AH}$, different from $A$, such that $M$ lies on line $PQ$. Prove that the orthocenter of $\triangle APQ$ lies on the circumcircle of $\triangle ABC$.
+</div><br>
+
+<form method="get" action="trivia.py">
+Answer for <pblm><b>Problem 2.1:</b></pblm> 
+<div class="buttons">
+    <input type="text" name="p2.1" size="2" maxlength="3">
+</div>
+<br>
+<br>
+Answer for <pblm><b>Problem 2.2:</b></pblm> 
+<div class="buttons">
+    <input type="text" name="p2.2" size="2" maxlength="3">
+</div>
+<br>
+<br>
+Answer for <pblm><b>Problem 2.3:</b></pblm> 
+<div class="buttons">
+    <input type="text" name="p2.3" size="2" maxlength="3">
+</div>
+<br>
+<br>
+Solution for <pblm><b>Problem 2.4:</b></pblm><br><br>
+<div class="buttons">
+    <input type="text" name="p2.4" size="2">
+</div>
+<br>
+<br>
+Solution for <pblm><b>Problem 2.5:</b></pblm><br><br>
+<div class="buttons">
+    <input type="text" name="p2.5" size="2">
+</div>
+<br>
+<br>
+Solution for <pblm><b>Problem 2.6:</b></pblm><br><br>
+<div class="buttons">
+    <input type="text" name="p2.6" size="2">
+</div>
+<br>
+<br>
+<input type="submit" method="trivia.py"/>
+</form>
+
+<hr>
+<div class="footer">
+  <h1 style="font-size: 12px; text-align:left;"> Contact Information </h1>
+  <p style="font-size: 10px; color:#2a2d33"> 
+    Stuyvesant Computer Science Department
+    <br></br>
+    Alex & Corwin
+    <br></br>
+    Phone: 212-312-4800
+    <br></br>
+    Fax: 212-587-3874
+    <br></br>
+    Emails:  <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMVJLfQbNPFDdrndXWJtxrjBqMpHxphZnbQjlZNJMZvVbsXDqmggvSfprqHJDbRlCFChMJF">
+      ceisenbeiss70@stuy.edu</a>, <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMVJLfQbNPFDdrndXWJtxrjBqMpHxphZnbQjlZNJMZvVbsXDqmggvSfprqHJDbRlCFChMJF">
+      ayuditsky70@stuy.edu</a>
+      <br></br>
+      Mildly Math Minded People
+      <br></br> 
+    
+  </p>
+
+ 
+</div>
+
+
+
+</p> 
+</div> 
+
+
+
+</body>
+</html>
